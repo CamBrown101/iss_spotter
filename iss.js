@@ -37,7 +37,6 @@ const fetchCoordsByIP = (ip, callback) => {
 const fetchISSFlyOverTimes = (coords, callback) => {
   const url = `http://api.open-notify.org/iss-pass.json?lat=${coords.latitude}&lon=${coords.longitude}`;
   request(url, (error, response, body) => {
-    console.log('response', response.statusCode);
     if (error) {
       return callback(error, null);
     }
